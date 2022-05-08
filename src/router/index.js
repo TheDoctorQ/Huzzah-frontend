@@ -4,7 +4,6 @@ import EventView from '../views/EventView.vue'
 import FeastView from '../views/FeastView.vue'
 import VendorView from '../views/VendorView.vue'
 
-
 const routes = [
   {
     path: '/',
@@ -42,3 +41,4 @@ const router = createRouter({
 })
 
 export default router
+
