@@ -41,9 +41,7 @@ export default {
       <br />
       {{ event.location }}
       <br />
-      <img v-bind:src="event.image">
-
-
+      <img v-for="image in event.images" v-bind:src="image.url" style="max-width: 85%">
       <br />
       <hr />
     </div>
