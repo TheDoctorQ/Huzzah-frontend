@@ -5,11 +5,12 @@ export default {
   data: function () {
     return {
       message: "Welcome to the Events Page!",
-      events: [],
+      events: []
       // searchTerm: ""
     };
   },
   created: function () {
+    console.log("in index")
     this.eventsIndex();
   },
   methods: {
@@ -31,22 +32,21 @@ export default {
 };
 </script>
 <template>
-  <div class="events-index">
+  <div class="events">
     <h1>{{ message }}</h1>
-    <template>
-      <div class="events-index">
-        <!-- Search: <input type="text" v-model="lowerSearchTerm"> -->
-        <div v-for="event in events">
-          <h1>{{ event.title }}</h1>
-          {{ event.time }}
-          <br />
-          {{ event.location }}
-          <br />
-          <br />
-          <hr />
-        </div>
-      </div>
-    </template>
+    <!-- Search: <input type="text" v-model="lowerSearchTerm"> -->
+    <div v-for="event in events" v-bind:key="event.id">
+      <h2>{{ event.title }}</h2>
+      {{ event.time }}
+      <br />
+      {{ event.location }}
+      <br />
+      <img v-bind:src="event.image">
+
+
+      <br />
+      <hr />
+    </div>
   </div>
 </template>
 
