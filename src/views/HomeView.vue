@@ -17,7 +17,7 @@ export default {
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhlZG9jdG9ycSIsImEiOiJjbDJ4dGIzaHAwMmd3M2RrZTQ4endlNmF4In0.IMYB7JtIW7g2yKnryg9d4A';
 const map = new mapboxgl.Map({
   container: 'map', // container ID
-  style: 'mapbox://styles/mapbox/streets-v11', // style URL
+  style: 'mapbox://styles/mapbox/satellite-streets-v11', // style URL
   center: [-104.900015, 39.228226], // starting position [lng, lat]
   zoom: 17 // starting zoom
 });
@@ -37,3 +37,8 @@ const map = new mapboxgl.Map({
   height: 500px;
 }
 </style>
+
+<!-- mapbox://styles/mapbox/streets-v11
+mapbox://styles/mapbox/outdoors-v11
+mapbox://styles/mapbox/light-v10
+mapbox://styles/mapbox/satellite-v9 -->
