@@ -14,7 +14,7 @@ export default {
 };
 
 <div id="map"></div>
-mapboxgl.accessToken = 'pk.eyJ1IjoidGhlZG9jdG9ycSIsImEiOiJjbDJ4dGIzaHAwMmd3M2RrZTQ4endlNmF4In0.IMYB7JtIW7g2yKnryg9d4A';
+mapboxgl.accessToken = process.env.VUE_APP_MAP_ACCESS_TOKEN;
 const map = new mapboxgl.Map({
   container: 'map', // container ID
   style: 'mapbox://styles/mapbox/satellite-streets-v11', // style URL
@@ -32,6 +32,12 @@ map.addControl(
     // Draw an arrow next to the location dot to indicate which direction the device is heading.
     showUserHeading: true
   })
+);
+map.addControl(
+  new MapboxDirections({
+    accessToken: mapboxgl.accessToken
+  }),
+  'top-left'
 );
 
 </script>
