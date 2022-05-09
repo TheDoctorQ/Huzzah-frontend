@@ -13,12 +13,13 @@ export default {
   methods: {},
 };
 
+<div id="map"></div>
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhlZG9jdG9ycSIsImEiOiJjbDJ4dGIzaHAwMmd3M2RrZTQ4endlNmF4In0.IMYB7JtIW7g2yKnryg9d4A';
 const map = new mapboxgl.Map({
   container: 'map', // container ID
   style: 'mapbox://styles/mapbox/streets-v11', // style URL
-  center: [-74.5, 40], // starting position [lng, lat]
-  zoom: 9 // starting zoom
+  center: [-104.900015, 39.228226], // starting position [lng, lat]
+  zoom: 17 // starting zoom
 });
 
 </script>
@@ -31,7 +32,8 @@ const map = new mapboxgl.Map({
 </template>
 
 <style>
-map {
-  height: 200px;
+#map {
+  width: 100%;
+  height: 500px;
 }
 </style>

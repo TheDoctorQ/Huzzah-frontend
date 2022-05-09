@@ -31,6 +31,7 @@ export default {
   },
 };
 </script>
+
 <template>
   <div class="feasts">
     <h1>{{ message }}</h1>
