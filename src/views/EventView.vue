@@ -30,7 +30,9 @@ export default {
     // }
   },
 };
+
 </script>
+
 <template>
   <div class="events">
     <h1>{{ message }}</h1>

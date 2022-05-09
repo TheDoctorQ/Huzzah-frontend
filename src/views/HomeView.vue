@@ -18,9 +18,21 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGhlZG9jdG9ycSIsImEiOiJjbDJ4dGIzaHAwMmd3M2RrZ
 const map = new mapboxgl.Map({
   container: 'map', // container ID
   style: 'mapbox://styles/mapbox/satellite-streets-v11', // style URL
-  center: [-104.900015, 39.228226], // starting position [lng, lat]
+  center: [-104.900015, 39.228226],
+  pitch: 50, // starting position [lng, lat]
   zoom: 17 // starting zoom
 });
+map.addControl(
+  new mapboxgl.GeolocateControl({
+    positionOptions: {
+      enableHighAccuracy: true
+    },
+    // When active the map will receive updates to the device's location as it changes.
+    trackUserLocation: true,
+    // Draw an arrow next to the location dot to indicate which direction the device is heading.
+    showUserHeading: true
+  })
+);
 
 </script>
 
