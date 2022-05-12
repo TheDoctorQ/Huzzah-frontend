@@ -1,3 +1,4 @@
+
 <script>
 import axios from 'axios';
 
@@ -41,9 +42,8 @@ export default {
       <h2>{{ event.title }}</h2>
       {{ event.time }}
       <br />
-      {{ event.location }}
-      <br />
-      <img v-for="image in event.images" v-bind:src="image.url" style="max-width: 85%">
+      <a href="mapbox://"> {{ event.location }} </a><br />
+      <img v-for=" image in event.images" v-bind:src="image.url" style="max-width: 85%">
       <br />
       <hr />
     </div>
