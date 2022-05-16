@@ -236,20 +236,20 @@ map.addControl(
   }),
   'top-left'
 );
-var directions = new MapboxDirections({
-  accessToken: process.env.VUE_APP_MAP_ACCESS_TOKEN,
-  unit: 'miles', // Use the metric system to display distances.
-  profile: 'mapbox/walking', // Set the initial profile to walking.
-  container: 'directions', // Specify an element thats not the map container.
-  //  controls: {instructions: false},
-  bearing: true,
-  steps: true,
-  controls: {
-    inputs: false,
-    instructions: true,
-    profileSwitcher: true
-  }
-});
+// var directions = new MapboxDirections({
+//   accessToken: process.env.VUE_APP_MAP_ACCESS_TOKEN,
+//   unit: 'miles', // Use the metric system to display distances.
+//   profile: 'mapbox/walking', // Set the initial profile to walking.
+//   container: 'directions', // Specify an element thats not the map container.
+//   //  controls: {instructions: false},
+//   bearing: true,
+//   steps: true,
+//   controls: {
+//     inputs: false,
+//     instructions: true,
+//     profileSwitcher: true
+//   }
+// });
 
 // map.on('load', function () {
 //   if (navigator.geolocation) {
