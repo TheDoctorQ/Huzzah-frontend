@@ -38,9 +38,10 @@ export default {
     <!-- Search: <input type="text" v-model="lowerSearchTerm"> -->
     <div v-for="feast in feasts" v-bind:key="feast.id">
       <h2>{{ feast.name }}</h2>
-      {{ feast.variety }}
+      What you can enjoy there: {{ feast.variety }}
       <br />
-      {{ feast.location }}
+      <br />
+      Location: {{ feast.location }}
       <br />
       <img v-for="image in feast.images" v-bind:src="image.url" style="max-width: 85%">
       <br />

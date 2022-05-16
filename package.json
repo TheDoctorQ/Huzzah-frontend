@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^5.0.0",
+    "@mapbox/polyline": "^1.1.1",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "mapbox-gl": "^2.8.2",
+    "mapbox-gl-directions": "^3.0.3",
     "mapbox-gl-vue": "^2.0.4",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"

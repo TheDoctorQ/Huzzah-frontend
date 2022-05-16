@@ -37,7 +37,8 @@ export default {
     <!-- Search: <input type="text" v-model="lowerSearchTerm"> -->
     <div v-for="vendor in vendors" v-bind:key="vendor.id">
       <h2>{{ vendor.name }}</h2>
-      {{ vendor.variety }}
+      {{ vendor.wares }}
+      <br />
       <br />
       {{ vendor.location }}
       <br />
