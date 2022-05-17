@@ -38,7 +38,7 @@ export default {
     <!-- Search: <input type="text" v-model="lowerSearchTerm"> -->
     <div v-for="feast in feasts" v-bind:key="feast.id">
       <h2>{{ feast.name }}</h2>
-      What you can enjoy there: {{ feast.variety }}
+      Feast upon: {{ feast.variety }}
       <br />
       <br />
       Location: {{ feast.location }}
