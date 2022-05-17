@@ -145,6 +145,17 @@ map.on('load', () => {
             'type': 'Point',
             'coordinates': [-104.899181, 39.227822]
           }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'description':
+              '<p style="text-align:center"><strong>Royal Procession</strong></p><br/><p style="text-align:center">Every Day at 12:30PM</p>'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-104.900814, 39.228547]
+          }
         }
       ]
     }
@@ -194,124 +205,128 @@ map.on('load', () => {
   });
 });
 map.on('load', () => {
-  map.addSource('feasts', {
-    'type': 'geojson',
-    'data': {
-      'type': 'FeatureCollection',
-      'features': [
-        {
-          'type': 'Feature',
-          'properties': {
-            'description':
-              '<p style="text-align:center"><strong>Crown Stage</strong></p><br/><p style="text-align:center">Acrobatrix: 11:00AM, 12:15PM, 2:15PM, 4:00PM</p><p style="text-align:center">The Amazing Hypnotist: 1:15PM & 3:45PM'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-104.901358, 39.228154]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'description':
-              '<p style="text-align:center"><strong>Jousting Arena</strong></p><br/><p style="text-align:center">The Knights Of Noble Cause: 11:30AM, 1:30PM, 4:30PM</p><p style="text-align:center">Knightwings: 12:30PM'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-104.897194, 39.227797]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'description':
-              '<p style="text-align:center"><strong>Castle Rose Stage</strong></p><br/><p style="text-align:center">Celtic Legacy: 12:30PM, 3:30PM</p><p style="text-align:center">The Reelin’ Rogues: 11:00AM & 2:00PM'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-104.900684, 39.228073]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'description':
-              '<p style="text-align:center"><strong>Globe Stage</strong></p><br/><p style="text-align:center">Cy The Sword Swallower: 11:30AM, 4:30PM</p><p style="text-align:center">Dragonfire: 12:30PM<p style="text-align:center">The CRAIC Show: 1:30PM & 5:30PM'
+  // map.addSource('feasts', {
+  //   'type': 'geojson',
+  //   'data': {
+  //     'type': 'FeatureCollection',
+  //     'features': [
+  //       {
+  // //         'type': 'Feature',
+  // //         'properties': {
+  // //           'description':
+  // //             '<p style="text-align:center"><strong>Crown Stage</strong></p><br/><p style="text-align:center">Acrobatrix: 11:00AM, 12:15PM, 2:15PM, 4:00PM</p><p style="text-align:center">The Amazing Hypnotist: 1:15PM & 3:45PM'
+  // //         },
+  // //         'geometry': {
+  // //           'type': 'Point',
+  // //           'coordinates': [-104.901358, 39.228154]
+  // //         }
+  // //       },
+  // //       {
+  // //         'type': 'Feature',
+  // //         'properties': {
+  // //           'description':
+  // //             '<p style="text-align:center"><strong>Jousting Arena</strong></p><br/><p style="text-align:center">The Knights Of Noble Cause: 11:30AM, 1:30PM, 4:30PM</p><p style="text-align:center">Knightwings: 12:30PM'
+  // //         },
+  // //         'geometry': {
+  // //           'type': 'Point',
+  // //           'coordinates': [-104.897194, 39.227797]
+  // //         }
+  // //       },
+  // //       {
+  // //         'type': 'Feature',
+  // //         'properties': {
+  // //           'description':
+  // //             '<p style="text-align:center"><strong>Castle Rose Stage</strong></p><br/><p style="text-align:center">Celtic Legacy: 12:30PM, 3:30PM</p><p style="text-align:center">The Reelin’ Rogues: 11:00AM & 2:00PM'
+  // //         },
+  // //         'geometry': {
+  // //           'type': 'Point',
+  // //           'coordinates': [-104.900684, 39.228073]
+  // //         }
+  // //       },
+  // //       {
+  // //         'type': 'Feature',
+  // //         'properties': {
+  // //           'description':
+  // //             '<p style="text-align:center"><strong>Globe Stage</strong></p><br/><p style="text-align:center">Cy The Sword Swallower: 11:30AM, 4:30PM</p><p style="text-align:center">Dragonfire: 12:30PM<p style="text-align:center">The CRAIC Show: 1:30PM & 5:30PM'
 
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-104.899238, 39.228043]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'description':
-              '<p style="text-align:center"><strong>Celestial Stage</strong></p><br/><p style="text-align:center">Kamikaze Fireflies: 11:45AM, 1:45PM, 3:45PM, 5:45PM</p>'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-104.902504, 39.228826]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'description':
-              '<p style="text-align:center"><strong>Fortune Stage</strong></p><br/><p style="text-align:center">London Broil: 12:00PM, 1:30PM, 4:00PM</p>'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-104.897878, 39.228162]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'description':
-              '<p style="text-align:center"><strong>Pirate Ship Stage</strong></p><br/><p style="text-align:center">The Angels-Heroines In Disguise: 12:30PM & 2:30PM</p><p style="text-align:center">The Washing Well Wenches: 1:30PM, 3:30PM, 5:00PM'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-104.902390, 39.228091]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'description':
-              '<p style="text-align:center"><strong>Pirates Pub Stage</strong></p><br/><p style="text-align:center">The Crimson Pirates: 12:30PM & 2:30PM</p><p style="text-align:center">Music: The Gathering: 1:30PM, 3:30PM, 5:00PM'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-104.899970, 39.228121]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'description':
-              '<p style="text-align:center"><strong>The Living Fountain</strong></p><br/><p style="text-align:center">Showtimes: 11:30AM, 1:30PM, 3:30PM</p>'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-104.899181, 39.227822]
-          }
-        }
-      ]
-    }
-  });
+  // //         },
+  // //         'geometry': {
+  // //           'type': 'Point',
+  // //           'coordinates': [-104.899238, 39.228043]
+  // //         }
+  // //       },
+  // //       {
+  // //         'type': 'Feature',
+  // //         'properties': {
+  // //           'description':
+  // //             '<p style="text-align:center"><strong>Celestial Stage</strong></p><br/><p style="text-align:center">Kamikaze Fireflies: 11:45AM, 1:45PM, 3:45PM, 5:45PM</p>'
+  // //         },
+  // //         'geometry': {
+  // //           'type': 'Point',
+  // //           'coordinates': [-104.902504, 39.228826]
+  // //         }
+  // //       },
+  // //       {
+  // //         'type': 'Feature',
+  // //         'properties': {
+  // //           'description':
+  // //             '<p style="text-align:center"><strong>Fortune Stage</strong></p><br/><p style="text-align:center">London Broil: 12:00PM, 1:30PM, 4:00PM</p>'
+  // //         },
+  // //         'geometry': {
+  // //           'type': 'Point',
+  // //           'coordinates': [-104.897878, 39.228162]
+  // //         }
+  // //       },
+  // //       {
+  // //         'type': 'Feature',
+  // //         'properties': {
+  // //           'description':
+  // //             '<p style="text-align:center"><strong>Pirate Ship Stage</strong></p><br/><p style="text-align:center">The Angels-Heroines In Disguise: 12:30PM & 2:30PM</p><p style="text-align:center">The Washing Well Wenches: 1:30PM, 3:30PM, 5:00PM'
+  // //         },
+  // //         'geometry': {
+  // //           'type': 'Point',
+  // //           'coordinates': [-104.902390, 39.228091]
+  // //         }
+  // //       },
+  // //       {
+  // //         'type': 'Feature',
+  // //         'properties': {
+  // //           'description':
+  // //             '<p style="text-align:center"><strong>Pirates Pub Stage</strong></p><br/><p style="text-align:center">The Crimson Pirates: 12:30PM & 2:30PM</p><p style="text-align:center">Music: The Gathering: 1:30PM, 3:30PM, 5:00PM'
+  // //         },
+  // //         'geometry': {
+  // //           'type': 'Point',
+  // //           'coordinates': [-104.899970, 39.228121]
+  // //         }
+  // //       },
+  // //       {
+  // //         'type': 'Feature',
+  // //         'properties': {
+  // //           'description':
+  // //             '<p style="text-align:center"><strong>The Living Fountain</strong></p><br/><p style="text-align:center">Showtimes: 11:30AM, 1:30PM, 3:30PM</p>'
+  // //         },
+  // //         'geometry': {
+  // //           'type': 'Point',
+  // //           'coordinates': [-104.899181, 39.227822]
+  // //         }
+  // //       }
+  // //     ]
+  // //   }
+  // // });
   // Add a layer showing the feasts.
+  map.addSource('tileset_data', {
+    "url": "mapbox://thedoctorq.cl33ejlp500h927pal6k79xqx-4r7vi",
+    "type": "vector"
+  });
   map.addLayer({
     'id': 'feasts',
     'type': 'circle',
-    'source': 'events',
+    'source': 'tileset_data',
+    'source-layer': 'coren-feasts',
     'paint': {
-      'circle-color': '#4264fb',
-      'circle-radius': 6,
-      'circle-stroke-width': 2,
-      'circle-stroke-color': '#ffffff'
+      'circle-color': '#7F3121',
+      'circle-opacity': 0.75,
+      'circle-radius': 5
     }
   });
 
@@ -341,7 +356,7 @@ map.on('load', () => {
     popup.setLngLat(coordinates).setHTML(description).addTo(map);
   });
 
-  map.on('mouseleave', 'events', () => {
+  map.on('mouseleave', 'feasts', () => {
     map.getCanvas().style.cursor = '';
     popup.remove();
   });
@@ -389,7 +404,7 @@ map.addControl(
     accessToken: mapboxgl.accessToken
 
   }),
-  'bottom-right'
+  'top-left'
 );
 // var directions = new MapboxDirections({
 //   accessToken: process.env.VUE_APP_MAP_ACCESS_TOKEN,
