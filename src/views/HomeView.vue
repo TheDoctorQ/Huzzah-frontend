@@ -19,8 +19,8 @@ export default {
 
 mapboxgl.accessToken = process.env.VUE_APP_MAP_ACCESS_TOKEN;
 const bounds = [
-  [-104.903, 39.2275], // Southwest coordinates
-  [-104.896, 39.2291] // Northeast coordinates
+  [-104.905, 39.2262], // Southwest coordinates
+  [-104.895, 39.2311] // Northeast coordinates
 ];
 // const eventCoordinates = [
 //   [100.507, 13.745],
@@ -37,6 +37,8 @@ const map = new mapboxgl.Map({
   center: [-104.900015, 39.228226],
   pitch: 50, // starting position [lng, lat]
   zoom: 17, // starting zoom
+  maxBounds: bounds, // Set the map's geographical boundaries.
+
 });
 map.on('load', () => {
   map.addSource('events', {
@@ -47,9 +49,8 @@ map.on('load', () => {
         {
           'type': 'Feature',
           'properties': {
-            'title': 'Acrobatrix',
             'description':
-              '<strong>Star and Thunder live up to their names in a fast paced fun filled show. Featuring Contortion, juggling, acrobatic stunts, foot archery and so much more!</p>'
+              '<p style="text-align:center"><strong>Crown Stage</strong></p><br/><p style="text-align:center">Acrobatrix: 11:00AM, 12:15PM, 2:15PM, 4:00PM</p><p style="text-align:center">The Amazing Hypnotist: 1:15PM & 3:45PM'
           },
           'geometry': {
             'type': 'Point',
@@ -60,88 +61,89 @@ map.on('load', () => {
           'type': 'Feature',
           'properties': {
             'description':
-              '<strong>Mad Men Season Five Finale Watch Party</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a Mad Men Season Five Finale Watch Party, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>'
+              '<p style="text-align:center"><strong>Jousting Arena</strong></p><br/><p style="text-align:center">The Knights Of Noble Cause: 11:30AM, 1:30PM, 4:30PM</p><p style="text-align:center">Knightwings: 12:30PM'
           },
           'geometry': {
             'type': 'Point',
-            'coordinates': [-77.003168, 38.894651]
+            'coordinates': [-104.897194, 39.227797]
           }
         },
         {
           'type': 'Feature',
           'properties': {
             'description':
-              '<strong>Big Backyard Beach Bash and Wine Fest</strong><p>EatBar (2761 Washington Boulevard Arlington VA) is throwing a Big Backyard Beach Bash and Wine Fest on Saturday, serving up conch fritters, fish tacos and crab sliders, and Red Apron hot dogs. 12:00-3:00 p.m. $25.</p>'
+              '<p style="text-align:center"><strong>Castle Rose Stage</strong></p><br/><p style="text-align:center">Celtic Legacy: 12:30PM, 3:30PM</p><p style="text-align:center">The Reelin’ Rogues: 11:00AM & 2:00PM'
           },
           'geometry': {
             'type': 'Point',
-            'coordinates': [-77.090372, 38.881189]
+            'coordinates': [-104.900684, 39.228073]
           }
         },
         {
           'type': 'Feature',
           'properties': {
             'description':
-              '<strong>Ballston Arts & Crafts Market</strong><p>The Ballston Arts & Crafts Market sets up shop next to the Ballston metro this Saturday for the first of five dates this summer. Nearly 35 artists and crafters will be on hand selling their wares. 10:00-4:00 p.m.</p>'
+              '<p style="text-align:center"><strong>Globe Stage</strong></p><br/><p style="text-align:center">Cy The Sword Swallower: 11:30AM, 4:30PM</p><p style="text-align:center">Dragonfire: 12:30PM<p style="text-align:center">The CRAIC Show: 1:30PM & 5:30PM'
+
           },
           'geometry': {
             'type': 'Point',
-            'coordinates': [-77.111561, 38.882342]
+            'coordinates': [-104.899238, 39.228043]
           }
         },
         {
           'type': 'Feature',
           'properties': {
             'description':
-              "<strong>Seersucker Bike Ride and Social</strong><p>Feeling dandy? Get fancy, grab your bike, and take part in this year's Seersucker Social bike ride from Dandies and Quaintrelles. After the ride enjoy a lawn party at Hillwood with jazz, cocktails, paper hat-making, and more. 11:00-7:00 p.m.</p>"
+              '<p style="text-align:center"><strong>Celestial Stage</strong></p><br/><p style="text-align:center">Kamikaze Fireflies: 11:45AM, 1:45PM, 3:45PM, 5:45PM</p>'
           },
           'geometry': {
             'type': 'Point',
-            'coordinates': [-77.052477, 38.943951]
+            'coordinates': [-104.902504, 39.228826]
           }
         },
         {
           'type': 'Feature',
           'properties': {
             'description':
-              '<strong>Capital Pride Parade</strong><p>The annual Capital Pride Parade makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>'
+              '<p style="text-align:center"><strong>Fortune Stage</strong></p><br/><p style="text-align:center">London Broil: 12:00PM, 1:30PM, 4:00PM</p>'
           },
           'geometry': {
             'type': 'Point',
-            'coordinates': [-77.043444, 38.909664]
+            'coordinates': [-104.897878, 39.228162]
           }
         },
         {
           'type': 'Feature',
           'properties': {
             'description':
-              '<strong>Muhsinah</strong><p>Jazz-influenced hip hop artist Muhsinah plays the Black Cat (1811 14th Street NW) tonight with Exit Clov and Gods’illa. 9:00 p.m. $12.</p>'
+              '<p style="text-align:center"><strong>Pirate Ship Stage</strong></p><br/><p style="text-align:center">The Angels-Heroines In Disguise: 12:30PM & 2:30PM</p><p style="text-align:center">The Washing Well Wenches: 1:30PM, 3:30PM, 5:00PM'
           },
           'geometry': {
             'type': 'Point',
-            'coordinates': [-77.031706, 38.914581]
+            'coordinates': [-104.902390, 39.228091]
           }
         },
         {
           'type': 'Feature',
           'properties': {
             'description':
-              "<strong>A Little Night Music</strong><p>The Arlington Players' production of Stephen Sondheim's <em>A Little Night Music</em> comes to the Kogod Cradle at The Mead Center for American Theater (1101 6th Street SW) this weekend and next. 8:00 p.m.</p>"
+              '<p style="text-align:center"><strong>Pirates Pub Stage</strong></p><br/><p style="text-align:center">The Crimson Pirates: 12:30PM & 2:30PM</p><p style="text-align:center">Music: The Gathering: 1:30PM, 3:30PM, 5:00PM'
           },
           'geometry': {
             'type': 'Point',
-            'coordinates': [-77.020945, 38.878241]
+            'coordinates': [-104.899970, 39.228121]
           }
         },
         {
           'type': 'Feature',
           'properties': {
             'description':
-              '<strong>Truckeroo</strong><p>Truckeroo brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>'
+              '<p style="text-align:center"><strong>The Living Fountain</strong></p><br/><p style="text-align:center">Showtimes: 11:30AM, 1:30PM, 3:30PM</p>'
           },
           'geometry': {
             'type': 'Point',
-            'coordinates': [-77.007481, 38.876516]
+            'coordinates': [-104.899181, 39.227822]
           }
         }
       ]
@@ -150,6 +152,159 @@ map.on('load', () => {
   // Add a layer showing the events.
   map.addLayer({
     'id': 'events',
+    'type': 'circle',
+    'source': 'events',
+    'paint': {
+      'circle-color': '#ccff33',
+      'circle-radius': 4,
+      'circle-stroke-width': 0,
+      'circle-stroke-color': '#ffffff'
+    }
+  });
+
+  // Create a popup, but don't add it to the map yet.
+  const popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+  });
+
+  map.on('mouseenter', 'events', (e) => {
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = 'pointer';
+
+    // Copy coordinates array.
+    const coordinates = e.features[0].geometry.coordinates.slice();
+    const description = e.features[0].properties.description;
+
+    // Ensure that if the map is zoomed out such that multiple
+    // copies of the feature are visible, the popup appears
+    // over the copy being pointed to.
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    popup.setLngLat(coordinates).setHTML(description).addTo(map);
+  });
+
+  map.on('mouseleave', 'events', () => {
+    map.getCanvas().style.cursor = '';
+    popup.remove();
+  });
+});
+map.on('load', () => {
+  map.addSource('feasts', {
+    'type': 'geojson',
+    'data': {
+      'type': 'FeatureCollection',
+      'features': [
+        {
+          'type': 'Feature',
+          'properties': {
+            'description':
+              '<p style="text-align:center"><strong>Crown Stage</strong></p><br/><p style="text-align:center">Acrobatrix: 11:00AM, 12:15PM, 2:15PM, 4:00PM</p><p style="text-align:center">The Amazing Hypnotist: 1:15PM & 3:45PM'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-104.901358, 39.228154]
+          }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'description':
+              '<p style="text-align:center"><strong>Jousting Arena</strong></p><br/><p style="text-align:center">The Knights Of Noble Cause: 11:30AM, 1:30PM, 4:30PM</p><p style="text-align:center">Knightwings: 12:30PM'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-104.897194, 39.227797]
+          }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'description':
+              '<p style="text-align:center"><strong>Castle Rose Stage</strong></p><br/><p style="text-align:center">Celtic Legacy: 12:30PM, 3:30PM</p><p style="text-align:center">The Reelin’ Rogues: 11:00AM & 2:00PM'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-104.900684, 39.228073]
+          }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'description':
+              '<p style="text-align:center"><strong>Globe Stage</strong></p><br/><p style="text-align:center">Cy The Sword Swallower: 11:30AM, 4:30PM</p><p style="text-align:center">Dragonfire: 12:30PM<p style="text-align:center">The CRAIC Show: 1:30PM & 5:30PM'
+
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-104.899238, 39.228043]
+          }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'description':
+              '<p style="text-align:center"><strong>Celestial Stage</strong></p><br/><p style="text-align:center">Kamikaze Fireflies: 11:45AM, 1:45PM, 3:45PM, 5:45PM</p>'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-104.902504, 39.228826]
+          }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'description':
+              '<p style="text-align:center"><strong>Fortune Stage</strong></p><br/><p style="text-align:center">London Broil: 12:00PM, 1:30PM, 4:00PM</p>'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-104.897878, 39.228162]
+          }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'description':
+              '<p style="text-align:center"><strong>Pirate Ship Stage</strong></p><br/><p style="text-align:center">The Angels-Heroines In Disguise: 12:30PM & 2:30PM</p><p style="text-align:center">The Washing Well Wenches: 1:30PM, 3:30PM, 5:00PM'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-104.902390, 39.228091]
+          }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'description':
+              '<p style="text-align:center"><strong>Pirates Pub Stage</strong></p><br/><p style="text-align:center">The Crimson Pirates: 12:30PM & 2:30PM</p><p style="text-align:center">Music: The Gathering: 1:30PM, 3:30PM, 5:00PM'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-104.899970, 39.228121]
+          }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'description':
+              '<p style="text-align:center"><strong>The Living Fountain</strong></p><br/><p style="text-align:center">Showtimes: 11:30AM, 1:30PM, 3:30PM</p>'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-104.899181, 39.227822]
+          }
+        }
+      ]
+    }
+  });
+  // Add a layer showing the feasts.
+  map.addLayer({
+    'id': 'feasts',
     'type': 'circle',
     'source': 'events',
     'paint': {
@@ -166,7 +321,7 @@ map.on('load', () => {
     closeOnClick: false
   });
 
-  map.on('mouseenter', 'events', (e) => {
+  map.on('mouseenter', 'feasts', (e) => {
     // Change the cursor style as a UI indicator.
     map.getCanvas().style.cursor = 'pointer';
 
@@ -234,7 +389,7 @@ map.addControl(
     accessToken: mapboxgl.accessToken
 
   }),
-  'top-left'
+  'bottom-right'
 );
 // var directions = new MapboxDirections({
 //   accessToken: process.env.VUE_APP_MAP_ACCESS_TOKEN,

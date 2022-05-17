@@ -40,10 +40,11 @@ export default {
     <!-- Search: <input type="text" v-model="lowerSearchTerm"> -->
     <div v-for="event in events" v-bind:key="event.id">
       <h2>{{ event.title }}</h2>
+      <p>{{ event.description }}</p>
       {{ event.time }}
       <br />
-      <a href="mapbox://"> {{ event.location }} </a><br />
-      <img v-for=" image in event.images" v-bind:src="image.url" style="max-width: 85%">
+      {{ event.location }} <br />
+      <img v-for=" image in event.images" v-bind:src="image.url" style="max-width: 100%">
       <br />
       <hr />
     </div>
