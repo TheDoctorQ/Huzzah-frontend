@@ -43,6 +43,7 @@ export default {
       <p>{{ event.description }}</p>
       {{ event.time }}
       <br />
+      <br />
       {{ event.location }} <br />
       <img v-for=" image in event.images" v-bind:src="image.url" style="max-width: 100%">
       <br />

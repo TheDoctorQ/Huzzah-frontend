@@ -1,5 +1,4 @@
 <script>
-import axios from 'axios';
 import mapboxgl from 'mapbox-gl';
 
 
@@ -1509,31 +1508,33 @@ map.addControl(
   }),
   'top-left'
 );
-// var directions = new MapboxDirections({
-//   accessToken: process.env.VUE_APP_MAP_ACCESS_TOKEN,
-//   unit: 'miles', // Use the metric system to display distances.
-//   profile: 'mapbox/walking', // Set the initial profile to walking.
-//   container: 'directions', // Specify an element thats not the map container.
-//   //  controls: {instructions: false},
-//   bearing: true,
-//   steps: true,
-//   controls: {
-//     inputs: false,
-//     instructions: true,
-//     profileSwitcher: true
-//   }
-// });
+var directions = new MapboxDirections({
+  accessToken: process.env.VUE_APP_MAP_ACCESS_TOKEN,
+  unit: 'miles', // Use the metric system to display distances.
+  profile: 'mapbox/walking', // Set the initial profile to walking.
+  container: 'directions', // Specify an element thats not the map container.
+  //  controls: {instructions: false},
+  bearing: true,
+  steps: true,
+  controls: {
+    inputs: false,
+    instructions: true,
+    profileSwitcher: true
+  }
+});
 
-// map.on('load', function () {
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(function (position) {
-//       directions.setOrigin([position.coords.longitude, position.coords.latitude]);
-//     });
-//   }
-// });
-// directions.on('route', function (e) {
-//   console.log(e.route); // Logs the current route shown in the interface.
-// });
+// GeoLocation
+
+map.on('load', function () {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      directions.setOrigin([position.coords.longitude, position.coords.latitude]);
+    });
+  }
+});
+directions.on('route', function (e) {
+  console.log(e.route); // Logs the current route shown in the interface.
+});
 
 
 </script>
@@ -1554,10 +1555,5 @@ map.addControl(
 .mapboxgl-popup {
   max-width: 400px;
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-}
-
-body {
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/dynamic-style.png'");
-  background-color: #cccccc;
 }
 </style>
