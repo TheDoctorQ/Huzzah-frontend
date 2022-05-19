@@ -1,4 +1,6 @@
 <template>
+  <div id="app"></div>
+
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/events">Events</router-link> |
@@ -8,6 +10,11 @@
   <router-view />
 </template>
 
+<script>
+export default {
+  name: 'App'
+}
+</script>
 
 <style>
 #app {
